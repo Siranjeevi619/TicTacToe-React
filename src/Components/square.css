@@ -1,0 +1,57 @@
+.cell {
+    height: 100px;
+    width: 100px;
+    color: #48CAE4;
+    background-color: white;
+    font-size: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .cell {
+        height: 80px;
+        width: 80px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cell {
+        height: 60px;
+        width: 60px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cell {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+    }
+}
+
+.cell:hover {
+    background-color: rgb(237, 237, 237);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 320px;
+}
+
+.winner {
+    text-align: center;
+    font-size: 24px;
+    color: #48CAE4;
+    margin-top: 20px;
+}
