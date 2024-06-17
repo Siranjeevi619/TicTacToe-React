@@ -1,34 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import "./winnerAnnouncement.css";
 
-function WinnerAnnouncement() {
-  const [visible, setVisible] = useState(false);
+Modal.setAppElement("#root");
+
+function WinnerAnnouncement(props) {
+  const [openCard, setOpenCard] = useState(props.visible);
+
+  useEffect(() => {
+    setOpenCard(props.visible);
+  }, [props.visible]);
+
+  const handleCard = () => {
+    setOpenCard(false);
+    if (props.onClose) {
+      props.onClose();
+    }
+  };
+
   return (
-    <div>
-      <button
-        onClick={() => {
-          setVisible(true);
-        }}
-      >
-        view
-      </button>
-      <Modal
-        isOpen={visible}
-        className="ReactModal__Content"
-        overlayClassName="ReactModal__Overlay"
-      >
-        <h2>Winner Announcement</h2>
-        <p>Congratulations! You are the winner!</p>
-        <button
-          onClick={() => {
-            setVisible(false);
-          }}
-        >
-          close
-        </button>
-      </Modal>
-    </div>
+    <Modal
+      isOpen={openCard}
+      className="ReactModal__Content"
+      overlayClassName="ReactModal__Overlay"
+      onRequestClose={handleCard}
+    >
+      <h2>Winner Announcement</h2>
+      <p>Congratulations! You are the {props.winner}</p>
+      <button onClick={handleCard}>Close</button>
+    </Modal>
   );
 }
 
