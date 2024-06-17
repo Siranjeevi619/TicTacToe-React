@@ -1,5 +1,5 @@
-import React from 'react'
-import GameBoard from './Components/GameBoard'
+import React from "react";
+import GameBoard from "./GameBoard";
 
 function Home() {
   return (
@@ -17,4 +17,4 @@ function Home() {
   );
 }
 
-export default Home
+export default Home;
