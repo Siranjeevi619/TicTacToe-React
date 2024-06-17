@@ -1,14 +1,14 @@
 import React from "react";
-import "./Navbar/Navbar.css";
+import "./styles/Navbar.css";
+import "./styles/styles.css";
 
 function Navbar() {
   return (
     <>
       <nav className="navbar  bg-light justify-content-center">
-        <a href="#" className="navbar-brand fs-3 nav-color fw-bold">
-          Tic Tac Toe
+        <a href="/" className="navbar-brand nav-color fw-bold">
+          <h4 className="h1 fw-bolder">Tic Tac Toe</h4>
         </a>
-        <div className="nav-pills"></div>
       </nav>
     </>
   );

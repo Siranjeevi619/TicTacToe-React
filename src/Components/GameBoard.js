@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Squares from "./Squares";
-import "./square.css";
+import "./styles/square.css";
 import WinnerAnnouncement from "./WinnerAnnouncement";
 
 function GameBoard() {
@@ -19,15 +19,24 @@ function GameBoard() {
     setIsX(!isX);
 
     const currentWinner = winnerCalculation(newSquare);
-    if (currentWinner && !showWinnerAnnouncement) {
+    if (currentWinner) {
       setWinner(currentWinner);
+      setShowWinnerAnnouncement(true);
+    } else if (!newSquare.includes(null)) {
+      setWinner("D");
       setShowWinnerAnnouncement(true);
     }
   };
+  const handleCloseAnnouncement = () => {
+    setShowWinnerAnnouncement(false);
+    setSquare(Array(9).fill(null));
+    setIsX(true);
+    setWinner(null);
+  };
 
   return (
-    <div className="container mt-5">
-      <div className="row justify-content-center">
+    <div className="container ms-lg-3  mt-5">
+      <div className=" row justify-content-center">
         <div className="row">
           <Squares value={square[0]} onClick={() => checkClick(0)} />
           <Squares value={square[1]} onClick={() => checkClick(1)} />
@@ -44,11 +53,28 @@ function GameBoard() {
           <Squares value={square[8]} onClick={() => checkClick(8)} />
         </div>
       </div>
-      {winner && <div className="winner mt-3">Winner: {winner}</div>}
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 me-lg-0 col-9 col-md-7 me-sm-0 mt-5">
+            <div className="justify-content-center d-flex align-items-center">
+              <button
+                className="btn btn-primary "
+                onClick={() => {
+                  setSquare(Array(9).fill(null));
+                }}
+              >
+                Reset Game
+                {/* mt-lg-5  me-lg-5 w-50 */}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* me-lg-2 mt-lg-0 me-lg-0 mt-4 me-4 */}
       <WinnerAnnouncement
         winner={winner}
         visible={showWinnerAnnouncement}
-        onClose={() => setShowWinnerAnnouncement(true)}
+        onClose={handleCloseAnnouncement}
       />
     </div>
   );
