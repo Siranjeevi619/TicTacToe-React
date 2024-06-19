@@ -58,7 +58,7 @@ function GameBoard() {
           <div className="col-lg-10 me-lg-0 col-9 col-md-7 me-sm-0 mt-5">
             <div className="justify-content-center d-flex align-items-center">
               <button
-                className="btn btn-primary "
+                className="btn btn-default shadow "
                 onClick={() => {
                   setSquare(Array(9).fill(null));
                 }}
