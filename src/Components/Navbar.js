@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles/Navbar.css";
 import "./styles/styles.css";
 
 function Navbar() {
+  useEffect(() => {
+    document.title = "Tic Tac Toe";
+  }, []);
   return (
     <>
       <nav className="navbar  bg-light justify-content-center">
