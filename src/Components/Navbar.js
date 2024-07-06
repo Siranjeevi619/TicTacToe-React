@@ -13,7 +13,7 @@ function Navbar() {
       <nav className="navbar  bg-light justify-content-center">
         <img src={catHeaderIcon} className="img-fluid navbar-brand" />
 
-        <a href="/" className="navbar-brand nav-color fw-bold">
+        <a href="#" className="navbar-brand nav-color fw-bold">
           <div className="d-inline">
             <h4 className="h1 fw-bolder">Tic Tac Toe</h4>
           </div>
