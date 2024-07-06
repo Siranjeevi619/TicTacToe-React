@@ -58,7 +58,7 @@ img{
   .ReactModal__Content {
     padding: 10px;
     font-size: 0.8rem;
-    width: fit-content;
+    width: 300px;
   }
 
   .close-button {
