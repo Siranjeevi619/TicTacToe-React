@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/TicTacToe-React/static/css/main.b579fac8.css",
-    "main.js": "/TicTacToe-React/static/js/main.03509c68.js",
+    "main.css": "/TicTacToe-React/static/css/main.44e25fff.css",
+    "main.js": "/TicTacToe-React/static/js/main.d9d58a0e.js",
     "static/js/453.1d9a75e6.chunk.js": "/TicTacToe-React/static/js/453.1d9a75e6.chunk.js",
+    "static/media/shiba-inu.png": "/TicTacToe-React/static/media/shiba-inu.79502682d3c76e121658.png",
+    "static/media/BowBow.png": "/TicTacToe-React/static/media/BowBow.24a80f7a6fb0e602ded6.png",
+    "static/media/cat.png": "/TicTacToe-React/static/media/cat.3520beac0aa89b1278f9.png",
+    "static/media/kitty.png": "/TicTacToe-React/static/media/kitty.e69219c07ed9edee734c.png",
     "index.html": "/TicTacToe-React/index.html",
-    "main.b579fac8.css.map": "/TicTacToe-React/static/css/main.b579fac8.css.map",
-    "main.03509c68.js.map": "/TicTacToe-React/static/js/main.03509c68.js.map",
+    "main.44e25fff.css.map": "/TicTacToe-React/static/css/main.44e25fff.css.map",
+    "main.d9d58a0e.js.map": "/TicTacToe-React/static/js/main.d9d58a0e.js.map",
     "453.1d9a75e6.chunk.js.map": "/TicTacToe-React/static/js/453.1d9a75e6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b579fac8.css",
-    "static/js/main.03509c68.js"
+    "static/css/main.44e25fff.css",
+    "static/js/main.d9d58a0e.js"
   ]
 }
