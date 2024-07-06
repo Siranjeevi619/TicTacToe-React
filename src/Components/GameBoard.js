@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Squares from "./Squares";
 import "./styles/square.css";
 import WinnerAnnouncement from "./WinnerAnnouncement";
+import DogIcon from "../assets/icons/BowBow.png";
+import CatIcon from "../assets/icons/kitty.png";
 
 function GameBoard() {
   const [square, setSquare] = useState(Array(9).fill(null));
@@ -14,7 +16,7 @@ function GameBoard() {
       return;
     }
     const newSquare = square.slice();
-    newSquare[i] = isX ? "X" : "O";
+    newSquare[i] = isX ? DogIcon : CatIcon;
     setSquare(newSquare);
     setIsX(!isX);
 
@@ -27,6 +29,7 @@ function GameBoard() {
       setShowWinnerAnnouncement(true);
     }
   };
+
   const handleCloseAnnouncement = () => {
     setShowWinnerAnnouncement(false);
     setSquare(Array(9).fill(null));
@@ -35,9 +38,9 @@ function GameBoard() {
   };
 
   return (
-    <div className="container ms-lg-3  mt-5">
-      <div className=" row justify-content-center">
-        <div className="ms-md-5 ms-lg-0 ">
+    <div className="container ms-lg-3 mt-5">
+      <div className="row justify-content-center">
+        <div className="ms-md-5 ms-lg-0">
           <div className="row ms-3">
             <Squares value={square[0]} onClick={() => checkClick(0)} />
             <Squares value={square[1]} onClick={() => checkClick(1)} />
@@ -60,19 +63,17 @@ function GameBoard() {
           <div className="col-lg-10 me-lg-0 col-9 col-md-7 me-sm-0 mt-5">
             <div className="justify-content-center d-flex align-items-center">
               <button
-                className="btn btn-primary "
+                className="btn btn-primary"
                 onClick={() => {
                   setSquare(Array(9).fill(null));
                 }}
               >
                 Reset Game
-                {/* mt-lg-5  me-lg-5 w-50 */}
               </button>
             </div>
           </div>
         </div>
       </div>
-      {/* me-lg-2 mt-lg-0 me-lg-0 mt-4 me-4 */}
       <WinnerAnnouncement
         winner={winner}
         visible={showWinnerAnnouncement}

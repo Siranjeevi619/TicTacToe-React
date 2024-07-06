@@ -1,12 +1,17 @@
 import React from "react";
-import "./styles/square.css";
+import PropTypes from "prop-types";
 
-function Squares(props) {
+function Squares({ value, onClick }) {
   return (
-    <button className="cell" onClick={props.onClick}>
-      {props.value}
+    <button className="cell" onClick={onClick}>
+      {value ? <img src={value} alt="Player" /> : null}
     </button>
   );
 }
+
+Squares.propTypes = {
+  value: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default Squares;
