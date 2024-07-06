@@ -40,18 +40,18 @@ function GameBoard() {
   return (
     <div className="container ms-lg-3 mt-5">
       <div className="row justify-content-center">
-        <div className="ms-md-5 ms-lg-0">
-          <div className="row ms-3">
+        <div className="ms-md-5 s ms-lg-0">
+          <div className="row ms-md-2">
             <Squares value={square[0]} onClick={() => checkClick(0)} />
             <Squares value={square[1]} onClick={() => checkClick(1)} />
             <Squares value={square[2]} onClick={() => checkClick(2)} />
           </div>
-          <div className="row ms-3">
+          <div className="row ms-md-2">
             <Squares value={square[3]} onClick={() => checkClick(3)} />
             <Squares value={square[4]} onClick={() => checkClick(4)} />
             <Squares value={square[5]} onClick={() => checkClick(5)} />
           </div>
-          <div className="row ms-3">
+          <div className="row ms-md-2">
             <Squares value={square[6]} onClick={() => checkClick(6)} />
             <Squares value={square[7]} onClick={() => checkClick(7)} />
             <Squares value={square[8]} onClick={() => checkClick(8)} />

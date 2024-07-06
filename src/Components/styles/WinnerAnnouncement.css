@@ -1,6 +1,6 @@
 img{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   align-items: center;
 }
 
@@ -58,7 +58,7 @@ img{
   .ReactModal__Content {
     padding: 10px;
     font-size: 0.8rem;
-    width: 200px;
+    width: fit-content;
   }
 
   .close-button {
